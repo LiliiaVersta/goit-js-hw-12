@@ -37,7 +37,6 @@ function createInfo(label, value) {
 
 export function updateGallery(images) {
   const galleryListEl = document.querySelector('.gallery');
-  galleryListEl.innerHTML = '';
 
   const cardsHTML = images.map(image => createCard(image)).join('');
   galleryListEl.insertAdjacentHTML('beforeend', cardsHTML);
