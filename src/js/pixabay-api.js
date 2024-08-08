@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export async function getPictures(searchStr) {
+export async function getPictures(searchStr, params) {
   const BASE_URL = 'https://pixabay.com/api/';
   const API_KEY = '45205747-764edaf41060424617edeea8e';
 
