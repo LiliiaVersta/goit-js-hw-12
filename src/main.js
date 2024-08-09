@@ -80,9 +80,7 @@ refs.searchFormEl.addEventListener('submit', async event => {
   const searchStr = refs.searchInputEl.value.trim();
 
   if (!searchStr) return;
-
   await renderPictures(searchStr);
-
   // refs.loadMoreBtnEl.classList.remove('is-hidden');
   refs.endTextEl.classList.add('is-hidden');
   refs.loadMoreBtnEl.addEventListener('click', onLoadMorePressed);
@@ -91,6 +89,6 @@ refs.searchFormEl.addEventListener('submit', async event => {
 const onLoadMorePressed = async event => {
   params.currentPage += 1;
   const searchStr = refs.searchInputEl.value.trim();
-  renderPictures(searchStr);
+  await renderPictures(searchStr);
   smoothScroll();
 };
